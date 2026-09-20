@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const modo = ref('login') // 'login' ou 'cadastro'
 
@@ -15,7 +18,9 @@ const confirmarSenha = ref('')
 
 function entrar() {
   console.log('Login:', email.value, senha.value)
-  // aqui depois entra a lógica real de autenticação
+  // aqui depois entra a validação real (checar no banco de dados, por exemplo)
+  // por enquanto, qualquer e-mail/senha preenchidos já entram:
+  router.push('/dashboard')
 }
 
 function cadastrar() {
