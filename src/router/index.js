@@ -1,7 +1,5 @@
-
-Index - JS
 import { createRouter, createWebHistory } from 'vue-router'
- 
+
 import Login from '../views/login.vue'
  
 const router = createRouter({
