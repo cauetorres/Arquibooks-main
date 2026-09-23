@@ -114,6 +114,21 @@
   font-size: 0.75rem;
 }
 
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 1.25rem 1.5rem;
+}
+
+/* NOVO: controla o tamanho do ícone (sem texto) */
+.logo-icon-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 /* ===== Área principal ===== */
 .main-area {
   flex: 1;
@@ -250,17 +265,37 @@
   font-weight: 700;
 }
 
-.stat-card.orange { border-color: #f76707; }
-.stat-card.orange .stat-label { background: #f76707; }
+.stat-card.orange {
+  border-color: #f76707;
+}
 
-.stat-card.green { border-color: #2f9e44; }
-.stat-card.green .stat-label { background: #2f9e44; }
+.stat-card.orange .stat-label {
+  background: #f76707;
+}
 
-.stat-card.blue { border-color: #4c6ef5; }
-.stat-card.blue .stat-label { background: #4c6ef5; }
+.stat-card.green {
+  border-color: #2f9e44;
+}
 
-.stat-card.purple { border-color: #7048e8; }
-.stat-card.purple .stat-label { background: #7048e8; }
+.stat-card.green .stat-label {
+  background: #2f9e44;
+}
+
+.stat-card.blue {
+  border-color: #4c6ef5;
+}
+
+.stat-card.blue .stat-label {
+  background: #4c6ef5;
+}
+
+.stat-card.purple {
+  border-color: #7048e8;
+}
+
+.stat-card.purple .stat-label {
+  background: #7048e8;
+}
 
 /* ===== Gráficos ===== */
 .charts-grid {
@@ -271,7 +306,9 @@
 }
 
 @media (max-width: 900px) {
-  .charts-grid { grid-template-columns: 1fr; }
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .chart-card {
@@ -411,14 +448,37 @@ table.data-table tbody td {
   color: #fff;
 }
 
-.badge-atrasado { background: #fa5252; }
-.badge-vencendo { background: #f59f00; }
-.badge-no-prazo { background: #2f9e44; }
-.badge-emprestado { background: #f76707; }
-.badge-disponivel { background: #2f9e44; }
-.badge-ativo { background: #2f9e44; }
-.badge-bloqueado { background: #fa5252; }
-.badge-ativos { background: #4c6ef5; }
+.badge-atrasado {
+  background: #fa5252;
+}
+
+.badge-vencendo {
+  background: #f59f00;
+}
+
+.badge-no-prazo {
+  background: #2f9e44;
+}
+
+.badge-emprestado {
+  background: #f76707;
+}
+
+.badge-disponivel {
+  background: #2f9e44;
+}
+
+.badge-ativo {
+  background: #2f9e44;
+}
+
+.badge-bloqueado {
+  background: #fa5252;
+}
+
+.badge-ativos {
+  background: #4c6ef5;
+}
 
 /* ===== Botões de ação (ícones) ===== */
 .action-btn {
@@ -431,5 +491,10 @@ table.data-table tbody td {
   margin-right: 0.3rem;
 }
 
-.action-btn.check { background: #2f9e44; }
-.action-btn.renew { background: #f76707; }
+.action-btn.check {
+  background: #2f9e44;
+}
+
+.action-btn.renew {
+  background: #f76707;
+}

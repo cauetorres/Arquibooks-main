@@ -9,7 +9,7 @@ defineProps({
   <div class="app-layout">
     <aside class="sidebar">
       <div class="sidebar-logo">
-        <img src="/src/assets/logo_arquibooks.jpeg" alt="ArquiBooks" widht="90" height="90" class="logo-icon-img" />
+        <img src="/src/assets/logo_icon.png" alt="ArquiBooks" class="logo-icon-img" />
         <div>
           <h1>ArquiBooks</h1>
           <small>SISTEMA DE GESTÃO DE BIBLIOTECA</small>
