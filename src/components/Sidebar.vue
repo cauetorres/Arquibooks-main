@@ -1,13 +1,25 @@
 <script setup>
+import { ref } from 'vue'
+
 defineProps({
   pageTitle: { type: String, required: true },
   active: { type: String, required: true },
 })
+
+const sidebarOpen = ref(false)
+
+function toggleSidebar() {
+  sidebarOpen.value = !sidebarOpen.value
+}
+
+function closeSidebar() {
+  sidebarOpen.value = false
+}
 </script>
 
 <template>
   <div class="app-layout">
-    <aside class="sidebar">
+    <aside class="sidebar" :class="{ open: sidebarOpen }">
       <div class="sidebar-logo">
         <img src="/src/assets/logo_icon.png" alt="ArquiBooks" class="logo-icon-img" />
         <div>
@@ -19,34 +31,34 @@ defineProps({
       <nav class="sidebar-nav">
         <div class="nav-group">
           <p class="nav-group-title">Principal</p>
-          <RouterLink to="/dashboard" class="nav-link" :class="{ active: active === 'dashboard' }">
+          <RouterLink to="/dashboard" class="nav-link" :class="{ active: active === 'dashboard' }" @click="closeSidebar">
             <span class="nav-icon">📊</span> Dashboard
           </RouterLink>
         </div>
 
         <div class="nav-group">
           <p class="nav-group-title">Acervo</p>
-          <RouterLink to="/livros" class="nav-link" :class="{ active: active === 'livros' }">
+          <RouterLink to="/livros" class="nav-link" :class="{ active: active === 'livros' }" @click="closeSidebar">
             <span class="nav-icon">📖</span> Livros
           </RouterLink>
-          <RouterLink to="/alunos" class="nav-link" :class="{ active: active === 'alunos' }">
+          <RouterLink to="/alunos" class="nav-link" :class="{ active: active === 'alunos' }" @click="closeSidebar">
             <span class="nav-icon">👥</span> Alunos
           </RouterLink>
         </div>
 
         <div class="nav-group">
           <p class="nav-group-title">Circulação</p>
-          <RouterLink to="/emprestimos" class="nav-link" :class="{ active: active === 'emprestimos' }">
+          <RouterLink to="/emprestimos" class="nav-link" :class="{ active: active === 'emprestimos' }" @click="closeSidebar">
             <span class="nav-icon">⬇️</span> Empréstimos
           </RouterLink>
-          <RouterLink to="/devolucoes" class="nav-link" :class="{ active: active === 'devolucoes' }">
+          <RouterLink to="/devolucoes" class="nav-link" :class="{ active: active === 'devolucoes' }" @click="closeSidebar">
             <span class="nav-icon">⬆️</span> Devoluções
           </RouterLink>
         </div>
 
         <div class="nav-group">
           <p class="nav-group-title">Comunicação</p>
-          <RouterLink to="/email" class="nav-link" :class="{ active: active === 'email' }">
+          <RouterLink to="/email" class="nav-link" :class="{ active: active === 'email' }" @click="closeSidebar">
             <span class="nav-icon">✉️</span> E-mails Automáticos
           </RouterLink>
         </div>
@@ -61,9 +73,14 @@ defineProps({
       </div>
     </aside>
 
+    <div class="sidebar-overlay" v-if="sidebarOpen" @click="closeSidebar"></div>
+
     <div class="main-area">
       <header class="topbar">
-        <h2>{{ pageTitle }}</h2>
+        <div class="topbar-left">
+          <button class="menu-toggle-btn" @click="toggleSidebar" aria-label="Abrir menu">☰</button>
+          <h2>{{ pageTitle }}</h2>
+        </div>
         <div class="topbar-actions">
           <input type="text" class="topbar-search" placeholder="" />
           <button class="icon-round-btn">🔔</button>
