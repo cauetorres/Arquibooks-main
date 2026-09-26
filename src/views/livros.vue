@@ -1,47 +1,50 @@
 <script setup>
 import Sidebar from '../components/Sidebar.vue'
 
-const envios = [
-  { data: '09/06/2026 08:00', aluno: 'João Silva', livro: 'Dom Casmurro', tipo: 'Aviso de atraso', status: 'Emprestado', badge: 'badge-emprestado' },
-  { data: '08/06/2026 08:00', aluno: 'Beatriz Almeida', livro: '1984', tipo: 'Vencendo (1 dia)', status: 'Disponível', badge: 'badge-disponivel' },
-  { data: '06/06/2026 08:00', aluno: 'Rafael Martins', livro: 'A Hora da Estrela', tipo: 'Lembrete 3 dias', status: 'Emprestado', badge: 'badge-emprestado' },
-  { data: '02/06/2026 08:00', aluno: 'Thiago Pereira', livro: 'Iracema', tipo: 'Aviso de atraso', status: 'Disponível', badge: 'badge-disponivel' },
-  { data: '28/05/2026 08:00', aluno: 'Camila Maia', livro: 'O Alquimista', tipo: 'Lembrete 3 dias', status: 'Emprestado', badge: 'badge-emprestado' },
+const livros = [
+  { titulo: 'Dom Casmurro', autor: 'Machado de Assis', categoria: 'Romance', isbn: '978-85-260-0611-5', exemplares: 5, disponiveis: 2, status: 'Disponível', badge: 'badge-disponivel' },
+  { titulo: '1984', autor: 'George Orwell', categoria: 'Ficção Científica', isbn: '978-85-359-0277-2', exemplares: 4, disponiveis: 0, status: 'Emprestado', badge: 'badge-emprestado' },
+  { titulo: 'A Hora da Estrela', autor: 'Clarice Lispector', categoria: 'Romance', isbn: '978-85-260-0587-3', exemplares: 3, disponiveis: 3, status: 'Disponível', badge: 'badge-disponivel' },
+  { titulo: 'Iracema', autor: 'José de Alencar', categoria: 'Romance', isbn: '978-85-08-04890-1', exemplares: 2, disponiveis: 0, status: 'Emprestado', badge: 'badge-emprestado' },
+  { titulo: 'O Alquimista', autor: 'Paulo Coelho', categoria: 'Ficção', isbn: '978-85-325-1229-0', exemplares: 6, disponiveis: 4, status: 'Disponível', badge: 'badge-disponivel' },
 ]
 </script>
 
 <template>
-  <Sidebar page-title="E-mail" active="email">
+  <Sidebar page-title="Livros" active="livros">
     <div class="page-header">
-      <h1>E-mail</h1>
-      <button class="btn-primary-action">Enviar Agora</button>
+      <h1>Livros</h1>
+      <button class="btn-primary-action">Cadastrar Livro</button>
+    </div>
+
+    <div class="filter-bar">
+      <input type="text" placeholder="Pesquisar por título, autor ou ISBN..." />
+      <select><option>Todas as categorias</option></select>
+      <select><option>Todos os status</option></select>
     </div>
 
     <div class="table-card">
-      <div class="table-card-header">
-        <h3>Histórico de Envios</h3>
-        <div class="table-tools">
-          <input type="text" placeholder="Filtrar..." />
-          <button class="btn-outline">Ver todos</button>
-        </div>
-      </div>
       <table class="data-table">
         <thead>
           <tr>
-            <th>Data/Hora</th>
-            <th>Aluno</th>
-            <th>Livro</th>
-            <th>Tipo</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Categoria</th>
+            <th>ISBN</th>
+            <th>Exemplares</th>
+            <th>Disponíveis</th>
             <th>Status</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(e, i) in envios" :key="i">
-            <td>{{ e.data }}</td>
-            <td>{{ e.aluno }}</td>
-            <td>{{ e.livro }}</td>
-            <td><span class="badge badge-ativos">{{ e.tipo }}</span></td>
-            <td><span class="badge" :class="e.badge">{{ e.status }}</span></td>
+          <tr v-for="(l, i) in livros" :key="i">
+            <td>{{ l.titulo }}</td>
+            <td>{{ l.autor }}</td>
+            <td>{{ l.categoria }}</td>
+            <td>{{ l.isbn }}</td>
+            <td>{{ l.exemplares }}</td>
+            <td>{{ l.disponiveis }}</td>
+            <td><span class="badge" :class="l.badge">{{ l.status }}</span></td>
           </tr>
         </tbody>
       </table>
