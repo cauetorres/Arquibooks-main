@@ -14,3 +14,5 @@ export default defineConfig({
     },
   },
 })
+
+//tirei o plugin//
