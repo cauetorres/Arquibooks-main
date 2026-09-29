@@ -1,3 +1,5 @@
+// tudo ok //
+
 <script setup>
 import { ref } from 'vue'
 
