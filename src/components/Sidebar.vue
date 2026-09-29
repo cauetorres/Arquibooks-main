@@ -32,34 +32,34 @@ function closeSidebar() {
         <div class="nav-group">
           <p class="nav-group-title">Principal</p>
           <RouterLink to="/dashboard" class="nav-link" :class="{ active: active === 'dashboard' }" @click="closeSidebar">
-            <span class="nav-icon">📊</span> Dashboard
+            <span class="nav-icon"><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/control-panel.png" alt="control-panel"/></span> Dashboard
           </RouterLink>
         </div>
 
         <div class="nav-group">
           <p class="nav-group-title">Acervo</p>
           <RouterLink to="/livros" class="nav-link" :class="{ active: active === 'livros' }" @click="closeSidebar">
-            <span class="nav-icon">📖</span> Livros
+            <span class="nav-icon"><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/literature--v1.png" alt="literature--v1"/></span> Livros
           </RouterLink>
           <RouterLink to="/alunos" class="nav-link" :class="{ active: active === 'alunos' }" @click="closeSidebar">
-            <span class="nav-icon">👥</span> Alunos
+            <span class="nav-icon"><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/user-group-man-man.png" alt="user-group-man-man"/></span> Alunos
           </RouterLink>
         </div>
 
         <div class="nav-group">
           <p class="nav-group-title">Circulação</p>
           <RouterLink to="/emprestimos" class="nav-link" :class="{ active: active === 'emprestimos' }" @click="closeSidebar">
-            <span class="nav-icon">⬇️</span> Empréstimos
+            <span class="nav-icon"><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/down-squared.png" alt="down-squared"/></span> Empréstimos
           </RouterLink>
           <RouterLink to="/devolucoes" class="nav-link" :class="{ active: active === 'devolucoes' }" @click="closeSidebar">
-            <span class="nav-icon">⬆️</span> Devoluções
+            <span class="nav-icon"><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/up-squared.png" alt="up-squared"/></span> Devoluções
           </RouterLink>
         </div>
 
         <div class="nav-group">
           <p class="nav-group-title">Comunicação</p>
           <RouterLink to="/email" class="nav-link" :class="{ active: active === 'email' }" @click="closeSidebar">
-            <span class="nav-icon">✉️</span> E-mails Automáticos
+            <span class="nav-icon"><img width="24" height="24" src="https://img.icons8.com/material-sharp/24/urgent-message.png" alt="urgent-message"/></span> E-mails Automáticos
           </RouterLink>
         </div>
       </nav>
