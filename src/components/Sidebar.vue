@@ -32,7 +32,7 @@ function closeSidebar() {
         <div class="nav-group">
           <p class="nav-group-title">Principal</p>
           <RouterLink to="/dashboard" class="nav-link" :class="{ active: active === 'dashboard' }" @click="closeSidebar">
-            <i class="bi bi-bar-chart-fill nav-icon"></i> Dashboard
+            <i class="bi bi-speedometer2 nav-icon"></i> Dashboard
           </RouterLink>
         </div>
 
