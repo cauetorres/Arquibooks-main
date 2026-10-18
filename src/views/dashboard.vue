@@ -46,7 +46,7 @@ const emprestimos = [
 
     <div class="charts-grid">
       <div class="chart-card">
-        <h3>📊 Empréstimos por Mês</h3>
+        <h3><i class="bi bi-bar-chart-line-fill"></i> Empréstimos por Mês</h3>
         <div class="bar-chart">
           <div class="bar-col" v-for="(v, i) in valores" :key="i">
             <div class="bar" :style="{ height: (v / maxValor) * 100 + '%' }"></div>
@@ -56,14 +56,14 @@ const emprestimos = [
       </div>
 
       <div class="chart-card">
-        <h3>🍩 Status do Acervo</h3>
+        <h3>  <i class="bi bi-record-circle-fill"></i> Status do Acervo</h3>
         <div class="donut"></div>
       </div>
     </div>
 
     <div class="table-card">
       <div class="table-card-header">
-        <h3>📋 Últimos Empréstimos Realizados</h3>
+        <h3> <i class="bi bi-calendar-minus-fill"></i> Últimos Empréstimos Realizados</h3>
         <div class="table-tools">
           <input type="text" placeholder="Filtrar..." />
           <button class="btn-outline">Ver todos</button>
