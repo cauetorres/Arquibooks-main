@@ -13,7 +13,7 @@ const envios = [
 <template>
   <Sidebar page-title="E-mail" active="email">
     <div class="page-header">
-      <h1>E-mail</h1>
+      <h1></h1>
       <button class="btn-primary-action">Enviar Agora</button>
     </div>
 

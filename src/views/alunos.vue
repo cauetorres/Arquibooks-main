@@ -14,7 +14,7 @@ const alunos = [
 <template>
   <Sidebar page-title="Alunos" active="alunos">
     <div class="page-header">
-      <h1>Alunos</h1>
+      <h1></h1>
       <button class="btn-primary-action">Cadastrar Aluno</button>
     </div>
 

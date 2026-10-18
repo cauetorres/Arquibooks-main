@@ -17,7 +17,8 @@ const emprestimos = [
 <template>
   <Sidebar page-title="Dashboard" active="dashboard">
     <div class="page-header">
-      <h1>Dashboard</h1>
+      <h1></h1>
+      
       <div style="display:flex; gap:0.6rem; align-items:center;">
         <button class="btn-outline">Junho 2026</button>
         <button class="btn-outline">Exportar PDF</button>

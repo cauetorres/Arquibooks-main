@@ -23,7 +23,7 @@ const historico = [
 <template>
   <Sidebar page-title="Devoluções" active="devolucoes">
     <div class="page-header">
-      <h1>Devoluções</h1>
+      <h1></h1>
     </div>
 
     <div class="table-card">

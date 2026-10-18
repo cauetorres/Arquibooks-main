@@ -13,7 +13,7 @@ const emprestimos = [
 <template>
   <Sidebar page-title="Empréstimos" active="emprestimos">
     <div class="page-header">
-      <h1>Empréstimos</h1>
+      <h1></h1>
       <button class="btn-primary-action">Novo Empréstimo</button>
     </div>
 

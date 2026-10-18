@@ -13,7 +13,7 @@ const livros = [
 <template>
   <Sidebar page-title="Livros" active="livros">
     <div class="page-header">
-      <h1>Livros</h1>
+      <h1></h1>
       <button class="btn-primary-action">Cadastrar Livro</button>
     </div>
 
