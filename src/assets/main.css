@@ -1,3 +1,10 @@
+html {
+  font-size: 20px; /* o padrão é 16px */
+}
+
+
+
+
 /* ===== Layout geral ===== */
 .app-layout {
   display: flex;
@@ -192,7 +199,7 @@
 }
 
 .page-header h1 {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   font-weight: 800;
   margin: 0;
 }
